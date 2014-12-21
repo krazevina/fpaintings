@@ -1,0 +1,37 @@
+<h1>Listing paintings</h1>
+<% if @paintings.blank? %>
+    <p>There are not any paintings currently in the system.</p>
+<% else %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Body</th>
+    <th>Year</th>
+    <th>Material</th>
+    <th>Location</th>
+    <th>Image</th>
+    <th>Category</th>
+    <th colspan="4"></th>
+  </tr>
+
+  <% @paintings.each do |painting| %>
+      <tr>
+        <td><%= painting.title %></td>
+        <td><%= painting.artist %></td>
+        <td><%= painting.body %></td>
+        <td><%= painting.year %></td>
+        <td><%= painting.material %></td>
+        <td><%= painting.location %></td>
+        <td><%= image_tag (painting.image), style: "width:200px" %></td>
+        <td><%= painting.category %></td>
+        <td><%= link_to 'New', new_painting_path %></td>
+        <td><%= link_to 'Show', painting_path(painting) %></td>
+        <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
+        <td><%= link_to 'Destroy', painting_path(painting),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+<% end %>

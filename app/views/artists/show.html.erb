@@ -1,0 +1,37 @@
+<p>
+  <strong>Name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <strong>Born:</strong>
+  <%= @artist.born %>
+</p>
+
+<p>
+  <strong>Died:</strong>
+  <%= @artist.died %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @artist.nationality %>
+</p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @artist.field %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @artist.intro %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @artist.img %>
+</p>
+
+<%= link_to 'Back', artists_path %>
+<%= link_to 'Edit', edit_artist_path(@artist) %>
