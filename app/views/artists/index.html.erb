@@ -8,7 +8,6 @@
     <th>Nationality</th>
     <th>Field</th>
     <th>Intro</th>
-    <th>Image</th>
     <th colspan="4"></th>
   </tr>
 
@@ -19,8 +18,7 @@
         <td><%= artist.died %></td>
         <td><%= artist.nationality %></td>
         <td><%= artist.field %></td>
-        <td><%= artist.intro %></td>
-        <td><%= artist.img %></td>
+        <td><%= artist.intro.html_safe %></td>
         <td><%= link_to 'New', new_artist_path %></td>
         <td><%= link_to 'Show', artist_path(artist) %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>

@@ -7,7 +7,6 @@ class CreateArtists < ActiveRecord::Migration
       t.string :nationality
       t.string :field
       t.string :intro
-      t.string :img
 
       t.timestamps
     end

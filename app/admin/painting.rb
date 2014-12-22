@@ -12,7 +12,7 @@ ActiveAdmin.register Painting do
     f.inputs do
       f.input :title
       f.input :artist
-      f.input :body
+      f.input :body, :as => :ckeditor
       f.input :year
       f.input :material
       f.input :location

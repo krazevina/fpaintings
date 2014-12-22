@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'paperclip'
 
 # Use unicorn as the app server
 # gem 'unicorn'
