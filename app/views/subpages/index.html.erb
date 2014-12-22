@@ -1,0 +1,15 @@
+<h1>Listing subpages</h1>
+
+<table>
+  <tr>
+    <th>Page name</th>
+    <th>Text</th>
+  </tr>
+
+  <% @subpages.each do |subpage| %>
+      <tr>
+        <td><%= subpage.pagename %></td>
+        <td><%= subpage.text %></td>
+      </tr>
+  <% end %>
+</table>

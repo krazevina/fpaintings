@@ -3,7 +3,7 @@
   <div id="content-sidebar-wrap">
     <div class="entry">
       <div class="page-header"><%= @painting.title %></div>
-      <p><%= @painting.body %></p>
+      <p><%= @painting.body.html_safe %></p>
       <div class="table"> <table class="infobox">
         <tr>
           <th colspan="2" class="title">
@@ -33,3 +33,4 @@
     </div>
   </div>
 </div>
+<%= render 'paintings/footer' %>

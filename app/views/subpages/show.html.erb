@@ -1,0 +1,11 @@
+<%= render 'paintings/header' %>
+<div id="inner">
+  <div id="content-sidebar-wrap">
+    <div class="entry">
+      <div class="page-header"><%= @subpage.pagename %></div>
+      <p><%= @subpage.text.html_safe %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'paintings/footer' %>

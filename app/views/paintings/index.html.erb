@@ -5,7 +5,7 @@
 <% if @paintings.blank? %>
     <p>There are not any paintings currently in the system.</p>
 <% else %>
-          <div class="page-header">Những bức họa nổi tiếng</div>
+          <div class="page-header"><h1>Những bức họa nổi tiếng</h1></div>
   <% @paintings.each do |painting| %>
               <div class="col-sm-3">
                 <h2 style="width:200px"><%= link_to image_tag(painting.image), painting_path(painting) %></h2>
@@ -17,3 +17,4 @@
     </div>
   </div>
 </div>
+<%= render 'paintings/footer' %>
