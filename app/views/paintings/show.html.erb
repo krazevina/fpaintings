@@ -2,7 +2,7 @@
 <div id="inner">
   <div id="content-sidebar-wrap">
     <div class="entry">
-      <div class="page-header"><h1><%= @painting.title %></h1></div>
+      <div class="col-md-8"><h1><%= @painting.title %></h1>
       <p><%= @painting.body.html_safe %></p></div>
       <div class="table"> <table class="infobox">
         <tr>
@@ -14,7 +14,7 @@
         </tr>
         <tr>
           <th>Artist</th>
-          <td><%= @painting.artist %></td>
+          <td><%= link_to @painting.artist, artist_path(@painting.artist_id) %></td>
         </tr>
         <tr>
           <th>Year</th>
@@ -32,4 +32,5 @@
       </div>
   </div>
 </div>
+    </div>
 <%= render 'paintings/footer' %>
