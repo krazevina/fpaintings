@@ -1,30 +1,53 @@
-<h1>Listing artists</h1>
+<%= render 'paintings/header' %>
+<div id="inner">
+  <div id="content-sidebar-wrap">
+    <div class="entry">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Born</th>
+                <th>Died</th>
+                <th>Nationality</th>
+                <th>Field</th>
+              </tr>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Born</th>
-    <th>Died</th>
-    <th>Nationality</th>
-    <th>Field</th>
-    <th>Intro</th>
-    <th colspan="4"></th>
-  </tr>
+              <% @artists.each do |artist| %>
+                  <tr>
+                    <td><%= link_to artist.name, artist_path(artist) %></td>
+                    <td><%= artist.born %></td>
+                    <td><%= artist.died %></td>
+                    <td><%= artist.nationality %></td>
+                    <td><%= artist.field %></td>
+                  </tr>
+              <% end %>
+            </table>
+          </div>
+          <div class="col-xs-6">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Born</th>
+                <th>Died</th>
+                <th>Nationality</th>
+                <th>Field</th>
+              </tr>
 
-  <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.born %></td>
-        <td><%= artist.died %></td>
-        <td><%= artist.nationality %></td>
-        <td><%= artist.field %></td>
-        <td><%= artist.intro.html_safe %></td>
-        <td><%= link_to 'New', new_artist_path %></td>
-        <td><%= link_to 'Show', artist_path(artist) %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist_path(artist),
-                        method: :delete,
-                        data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
-</table>
+              <% @artists.each do |artist| %>
+                  <tr>
+                    <td><%= link_to artist.name, artist_path(artist) %></td>
+                    <td><%= artist.born %></td>
+                    <td><%= artist.died %></td>
+                    <td><%= artist.nationality %></td>
+                    <td><%= artist.field %></td>
+                  </tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>

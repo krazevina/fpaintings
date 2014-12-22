@@ -5,12 +5,12 @@
 <% if @paintings.blank? %>
     <p>There are not any paintings currently in the system.</p>
 <% else %>
-
+          <div class="page-header">Những bức họa nổi tiếng</div>
   <% @paintings.each do |painting| %>
               <div class="col-sm-3">
                 <h2 style="width:200px"><%= link_to image_tag(painting.image), painting_path(painting) %></h2>
-                <h2><%= link_to painting.title, painting_path(painting) %></h2>
-                <h2>By: <%= link_to painting.artist, artist_path(painting) %></h2>
+                <strong style="font-size: 18px"><%= link_to painting.title, painting_path(painting) %>, <%= painting.year %></strong>
+                <h5>By: <%= link_to painting.artist, artist_path(painting.artist_id) %></h5>
               </div>
 <% end %>
 <% end %>

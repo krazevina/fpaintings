@@ -1,41 +1,35 @@
-<p>
-  <strong>Title:</strong>
-  <%= @painting.title %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= @painting.artist %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @painting.body.html_safe %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @painting.year %>
-</p>
-
-<p>
-  <strong>Material:</strong>
-  <%= @painting.material %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @painting.location %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag (@painting.image), style: "width:200px" %>
-</p>
-<p>
-  <strong>Category:</strong>
-  <%= @painting.category %>
-</p>
-
-<%= link_to 'Back', paintings_path %>
-<%= link_to 'Edit', edit_painting_path(@painting) %>
+<%= render 'paintings/header' %>
+<div id="inner">
+  <div id="content-sidebar-wrap">
+    <div class="entry">
+      <div class="page-header"><%= @painting.title %></div>
+      <p><%= @painting.body %></p>
+      <div class="table"> <table class="infobox">
+        <tr>
+          <th colspan="2" class="title">
+            <em><%= @painting.title %></em></th>
+        </tr>
+        <tr>
+          <td colspan="2" class="center"><%= image_tag (@painting.image), style: "width:200px" %></td>
+        </tr>
+        <tr>
+          <th>Artist</th>
+          <td><%= @painting.artist %></td>
+        </tr>
+        <tr>
+          <th>Year</th>
+          <td><%= @painting.year %></td>
+        </tr>
+        <tr>
+          <th>Medium</th>
+          <td><%= @painting.material %></td>
+        </tr>
+        <tr>
+          <th>Location</th>
+          <td><%= @painting.location %></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>

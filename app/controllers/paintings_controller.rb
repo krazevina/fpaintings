@@ -1,6 +1,6 @@
 class PaintingsController < ApplicationController
   def index
-    @paintings = Painting.all
+    @paintings = Painting.order(:year)
   end
   def new
     @painting = Painting.new
