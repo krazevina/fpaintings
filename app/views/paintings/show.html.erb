@@ -13,19 +13,19 @@
           <td colspan="2" class="center"><%= image_tag (@painting.image), style: "width:200px" %></td>
         </tr>
         <tr>
-          <th>Artist</th>
+          <th>Họa sĩ</th>
           <td><%= link_to @painting.artist, artist_path(@painting.artist_id) %></td>
         </tr>
         <tr>
-          <th>Year</th>
+          <th>Năm</th>
           <td><%= @painting.year %></td>
         </tr>
         <tr>
-          <th>Medium</th>
+          <th>Chất liệu</th>
           <td><%= @painting.material %></td>
         </tr>
         <tr>
-          <th>Location</th>
+          <th>Địa điểm</th>
           <td><%= @painting.location %></td>
         </tr>
       </table>
