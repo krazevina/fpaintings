@@ -2,8 +2,8 @@
 <div id="inner">
   <div id="content-sidebar-wrap">
     <div class="entry">
-      <div class="page-header"><%= @painting.title %></div>
-      <p><%= @painting.body.html_safe %></p>
+      <div class="page-header"><h1><%= @painting.title %></h1></div>
+      <p><%= @painting.body.html_safe %></p></div>
       <div class="table"> <table class="infobox">
         <tr>
           <th colspan="2" class="title">
@@ -30,7 +30,6 @@
         </tr>
       </table>
       </div>
-    </div>
   </div>
 </div>
 <%= render 'paintings/footer' %>

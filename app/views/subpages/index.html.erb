@@ -8,8 +8,8 @@
 
   <% @subpages.each do |subpage| %>
       <tr>
-        <td><%= subpage.pagename %></td>
-        <td><%= subpage.text %></td>
+        <td><%= link_to subpage.pagename, subpage_path(subpage) %></td>
+        <td><%= subpage.text.html_safe %></td>
       </tr>
   <% end %>
 </table>
