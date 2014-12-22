@@ -7,7 +7,7 @@
 <% else %>
 
   <% @paintings.each do |painting| %>
-              <div class="">
+              <div class="col-sm-3">
                 <h2 style="width:200px"><%= link_to image_tag(painting.image), painting_path(painting) %></h2>
                 <h2><%= link_to painting.title, painting_path(painting) %></h2>
                 <h2>By: <%= link_to painting.artist, artist_path(painting) %></h2>
