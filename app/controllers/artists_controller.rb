@@ -2,6 +2,7 @@ class ArtistsController < ApplicationController
   def index
     @artists = Artist.order(:born)
   end
+
   def new
     @artist = Artist.new
   end
@@ -43,6 +44,6 @@ class ArtistsController < ApplicationController
 
   private
   def artist_params
-    params.require(:artist).permit(:name, :born, :died, :nationality, :field, :intro)
+    params.require(:artist).permit(:name, :born, :died, :nationality, :field, :intro, :img)
   end
 end
