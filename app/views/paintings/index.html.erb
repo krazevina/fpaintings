@@ -1,25 +1,19 @@
-<h1 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">Listing paintings</h1>
+<%= render 'paintings/header' %>
+<div id="inner">
+  <div id="content-sidebar-wrap">
+    <div class="entry">
 <% if @paintings.blank? %>
     <p>There are not any paintings currently in the system.</p>
 <% else %>
 
   <% @paintings.each do |painting| %>
-          <div class="gallery">
-
-        <h2><%= painting.title %></h2>
-        <h2><%= painting.artist %></h2>
-        <h2><%= painting.body.html_safe %></h2>
-        <h2><%= painting.year %></h2>
-        <h2><%= painting.material %></h2>
-        <h2><%= painting.location %></h2>
-        <h2><%= image_tag (painting.image), style: "width:200px" %></h2>
-        <h2><%= painting.category %></h2>
-        <p><%= link_to 'New', new_painting_path %></p>
-        <p><%= link_to 'Show', painting_path(painting) %></p>
-        <p><%= link_to 'Edit', edit_painting_path(painting) %></p>
-        <p><%= link_to 'Destroy', painting_path(painting),
-                        method: :delete,
-                        data: { confirm: 'Are you sure?' } %></p>
+              <div class="">
+                <h2 style="width:200px"><%= link_to image_tag(painting.image), painting_path(painting) %></h2>
+                <h2><%= link_to painting.title, painting_path(painting) %></h2>
+                <h2>By: <%= link_to painting.artist, artist_path(painting) %></h2>
+              </div>
+<% end %>
 <% end %>
     </div>
-<% end %>
+  </div>
+</div>

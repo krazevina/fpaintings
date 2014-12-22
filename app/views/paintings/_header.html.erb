@@ -1,0 +1,26 @@
+<div class="container">
+   <div id="wrap">
+    <div id="header">
+      <div class="wrap">
+        <div id="logo">
+
+          <%= link_to image_tag("banner.jpg"), :style => "width:400px" %>
+        </div>
+        <div class="searchform">
+          <form class="searchform" action="#" id="cse-search-box">
+            <input type="text" name="q" class="s" value="Tìm kiếm" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+            <input type="hidden" name="cx" value="partner-pub-0956577070291964:9991229555" />
+            <input type="hidden" name="cof" value="FORID:10" />
+            <input type="hidden" name="ie" value="UTF-8" />
+          </form>            </div>
+      </div>
+    </div>
+    <div id="nav">
+      <ul class="nav superfish">
+        <li class="page_item page-item-136 current_page_ancestor current_page_parent"><%= link_to "Bức Họa Nổi Tiếng", paintings_url %></li>
+        <li class="page_item page-item-95"><%= link_to "Họa Sĩ Nổi Tiếng", paintings_path %></li>
+        <li class="page_item page-item-100"><%= link_to "Lịch Sử Hội Họa Thế Giới", paintings_url %></li>
+      </ul>
+    </div>
+   </div>
+</div>
