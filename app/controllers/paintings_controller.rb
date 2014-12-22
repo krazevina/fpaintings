@@ -1,6 +1,6 @@
 class PaintingsController < ApplicationController
   def index
-    @paintings = Painting.order(:year)
+    @paintings = Painting.paginate(:page => params[:page], :per_page => 6)
   end
   def new
     @painting = Painting.new

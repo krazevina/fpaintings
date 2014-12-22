@@ -4,47 +4,28 @@
     <div class="entry">
       <div class="container">
         <div class="row">
-          <div class="col-xs-6">
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Born</th>
-                <th>Died</th>
-                <th>Nationality</th>
-                <th>Field</th>
-              </tr>
-              <% @artists.each do |artist| %>
-                  <tr>
-                    <td><%= link_to artist.name, artist_path(artist) %></td>
-                    <td><%= artist.born %></td>
-                    <td><%= artist.died %></td>
-                    <td><%= artist.nationality %></td>
-                    <td><%= artist.field %></td>
-                  </tr>
-              <% end %>
-            </table>
+          <div class="col-md-4">
+            <p>Some intro goes here</p>
           </div>
-          <div class="col-xs-6">
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Born</th>
-                <th>Died</th>
-                <th>Nationality</th>
-                <th>Field</th>
-              </tr>
-
-              <% @artists.each do |artist| %>
-                  <tr>
-                    <td><%= link_to artist.name, artist_path(artist) %></td>
-                    <td><%= artist.born %></td>
-                    <td><%= artist.died %></td>
-                    <td><%= artist.nationality %></td>
-                    <td><%= artist.field %></td>
-                  </tr>
-              <% end %>
-            </table>
-          </div>
+          <div class="col-md-8">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Born</th>
+              <th>Died</th>
+              <th>Nationality</th>
+              <th>Field</th>
+            </tr>
+            <% @artists.each do |artist| %>
+                <tr>
+                  <td><%= link_to artist.name, artist_path(artist) %></td>
+                  <td><%= artist.born %></td>
+                  <td><%= artist.died %></td>
+                  <td><%= artist.nationality %></td>
+                  <td><%= artist.field %></td>
+                </tr>
+            <% end %>
+          </table>
         </div>
       </div>
         </div>

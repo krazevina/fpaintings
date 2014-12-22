@@ -12,7 +12,9 @@
                 <strong style="font-size: 18px"><%= link_to painting.title, painting_path(painting) %>, <%= painting.year %></strong>
                 <h5>By: <%= link_to painting.artist, artist_path(painting.artist_id) %></h5>
               </div>
+
 <% end %>
+          <%= will_paginate @paintings %>
 <% end %>
     </div>
   </div>
