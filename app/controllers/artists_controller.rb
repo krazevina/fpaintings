@@ -1,4 +1,9 @@
 class ArtistsController < ApplicationController
+  USER_ID, PASSWORD = "admin", "123456"
+
+  # Require authentication for new, edit and delete operation
+  before_filter :authenticate, :only => [ :new, :create, :update, :edit, :destroy ]
+
   def index
     @artists = Artist.order(:born)
   end
@@ -45,5 +50,11 @@ class ArtistsController < ApplicationController
   private
   def artist_params
     params.require(:artist).permit(:name, :born, :died, :nationality, :field, :intro, :img)
+  end
+  private
+  def authenticate
+    authenticate_or_request_with_http_basic do |id, password|
+      id == USER_ID && password == PASSWORD
+    end
   end
 end

@@ -52,8 +52,7 @@ ActiveRecord::Schema.define(version: 20141222142445) do
     t.string   "died"
     t.string   "nationality"
     t.string   "field"
-    t.string   "intro"
-    t.string   "img"
+    t.text     "intro"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

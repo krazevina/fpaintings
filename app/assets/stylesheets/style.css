@@ -10,8 +10,7 @@
 /* Import Fonts
 ------------------------------------------------------------ */
 
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
-
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic);
 
 /* Defaults
 ------------------------------------------------------------ */
@@ -29,8 +28,10 @@ select,
 textarea {
 	color:black;
 	/*font-family: Times New Roman,serif;*/
-	font-family: georgia, "times new roman", times, serif;
-	font-size: 16px;
+	/*font-family: georgia, "times new roman", times, serif;*/
+
+    font-family: 'Vollkorn', serif !important;
+	font-size: 17px;
 	line-height: 1.5;
 	padding: 0;
 	text-decoration: none;
@@ -673,7 +674,7 @@ img {
 	height: auto;
 	max-width: 100%;
 	margin-top:10px;
-	
+	margin-left: 20px;
 }
 img.pic{
 margin-left:100px;
@@ -1417,7 +1418,6 @@ td.textpart {
 	float: right;
 	clear: right;
 	text-align: left;
-	font-size: 70%;
 	line-height: 1.5em;
 	width:260px;
 }

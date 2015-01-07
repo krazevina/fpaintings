@@ -1,3 +1,9 @@
+<% provide(:title, "Trang chủ")%>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> | Fpainting</title>
+</head>
 <%= render 'paintings/header' %>
 <div id="inner">
   <div id="content-sidebar-wrap">
@@ -10,7 +16,7 @@
               <div class="col-sm-4">
                 <h2 style="width:200px"><%= link_to image_tag(painting.image), painting_path(painting) %></h2>
                 <strong style="font-size: 18px"><%= link_to painting.title, painting_path(painting) %>, <%= painting.year %></strong>
-                <h5>By: <%= link_to painting.artist, artist_path(painting.artist_id) %></h5>
+                <h5>Họa sĩ: <%= link_to painting.artist, artist_path(painting.artist_id) %></h5>
               </div>
 
 <% end %>
@@ -21,3 +27,4 @@
   </div>
 </div>
 <%= render 'paintings/footer' %>
+</html>

@@ -1,4 +1,9 @@
 class PaintingsController < ApplicationController
+  USER_ID, PASSWORD = "admin", "123456"
+
+  # Require authentication for new, edit and delete operation
+  before_filter :authenticate, :only => [ :new, :create, :update, :edit, :destroy ]
+
   def index
     @paintings = Painting.paginate(:page => params[:page], :per_page => 6)
   end
@@ -50,5 +55,11 @@ class PaintingsController < ApplicationController
   private
   def painting_params
     params.require(:painting).permit(:title, :artist_id, :body, :year, :material, :location, :image, :category_id)
+  end
+  private
+  def authenticate
+    authenticate_or_request_with_http_basic do |id, password|
+      id == USER_ID && password == PASSWORD
+    end
   end
 end

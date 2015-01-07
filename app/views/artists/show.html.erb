@@ -1,9 +1,15 @@
+<% provide(:title, @artist.name)%>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> | Fpainting</title>
+</head>
 <%= render 'paintings/header' %>
 <div id="inner">
   <div id="content-sidebar-wrap">
     <div class="entry">
-      <div class="page-header"><%= @artist.name %></div>
-      <p><%= @artist.intro.html_safe %></p>
+      <div class="col-md-8"><h2><%= @artist.name %></h2>
+      <p><%= @artist.intro.html_safe %></p></div>
       <div class="table"> <table class="infobox">
         <tr>
           <th colspan="2" class="title">
@@ -27,3 +33,4 @@
   </div>
 </div>
 <%= render 'paintings/footer' %>
+</html>

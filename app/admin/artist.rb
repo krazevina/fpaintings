@@ -1,5 +1,13 @@
 ActiveAdmin.register Artist do
   permit_params :name, :born, :died, :nationality, :field, :intro
+  index do
+    column :name
+    column :born
+    column :died
+    column :nationality
+    column :field
+    actions
+  end
   form :html => {:multipart => true} do |f|
     f.inputs do
       f.input :name

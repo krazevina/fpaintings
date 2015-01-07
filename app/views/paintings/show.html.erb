@@ -1,3 +1,9 @@
+<% provide(:title, @painting.title)%>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> | Fpainting</title>
+</head>
 <%= render 'paintings/header' %>
 <div id="inner">
   <div id="content-sidebar-wrap">
@@ -34,3 +40,4 @@
 </div>
     </div>
 <%= render 'paintings/footer' %>
+</html>

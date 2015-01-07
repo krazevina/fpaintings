@@ -1,4 +1,9 @@
 class SubpagesController < ApplicationController
+  USER_ID, PASSWORD = "admin", "123456"
+
+  # Require authentication for new, edit and delete operation
+  before_filter :authenticate, :only => [ :new, :create, :update, :edit, :destroy ]
+
   def index
     @subpages = Subpage.all
   end
@@ -40,5 +45,11 @@ class SubpagesController < ApplicationController
   private
   def subpage_params
     params.require(:subpage).permit(:pagename, :text)
+  end
+  private
+  def authenticate
+    authenticate_or_request_with_http_basic do |id, password|
+      id == USER_ID && password == PASSWORD
+    end
   end
 end

@@ -6,7 +6,7 @@ class CreateArtists < ActiveRecord::Migration
       t.string :died
       t.string :nationality
       t.string :field
-      t.string :intro
+      t.text :intro
 
       t.timestamps
     end

@@ -1,11 +1,18 @@
+<% provide(:title, @subpage.pagename)%>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> | Fpainting</title>
+</head>
 <%= render 'paintings/header' %>
 <div id="inner">
   <div id="content-sidebar-wrap">
     <div class="entry">
-      <div class="page-header"><%= @subpage.pagename %></div>
+      <div class="page-header"><h1><%= @subpage.pagename %></h1></div>
       <p><%= @subpage.text.html_safe %></p>
       </div>
     </div>
   </div>
 </div>
 <%= render 'paintings/footer' %>
+</html>
